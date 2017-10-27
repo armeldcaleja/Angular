@@ -1,0 +1,10 @@
+<div>{{ category?.name }}</div>
+<div>{{ products?.length }} Products</div>
+<div *ngFor="let product of products">
+    <div>
+        <img [src]="product.imageUrl" width="75px">
+        <div class="col"><a [routerLink]="['/details/product', product.id]">{{ product.name }}</a></div>
+        <div><span>$</span>{{ product.price }}</div>
+        <div>{{ product.stocks }} stocks available</div>
+    </div>
+</div>

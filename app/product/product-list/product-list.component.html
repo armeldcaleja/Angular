@@ -1,0 +1,14 @@
+<div style="margin-left: 50px;" *ngIf="products?.length > 0">
+    <div class="row">
+        <div class="col">Product Name</div>
+        <div class="col">Price</div>
+        <div class="col">Available Stocks</div>
+    </div>
+    <div *ngFor="let product of products">
+        <div class="row">
+            <div class="col"><a [routerLink]="['/details/product', product.id]">{{ product.name }}</a></div>
+            <div class="col">{{ product.price | convertcurrency:isDollar }}</div>
+            <div class="col">{{ product.stocks }}</div>
+        </div>
+    </div>
+</div>

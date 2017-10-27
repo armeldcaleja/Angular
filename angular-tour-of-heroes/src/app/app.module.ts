@@ -14,13 +14,15 @@ import { HttpModule } from '@angular/http';
 // imports for loading and configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { TryComponent } from './test/try/try.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
-    DashboardComponent
+    DashboardComponent,
+    TryComponent
   ],
   imports: [
     BrowserModule,

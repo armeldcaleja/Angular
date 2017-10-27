@@ -1,0 +1,6 @@
+<div *ngIf="product">
+  <img [src]="product.imageUrl" width="75px">
+  <div class="col">{{ product.name }}</div>
+  <div><span>$</span>{{ product.price }}</div>
+  <div>{{ product.stocks }} stocks available</div>
+</div>

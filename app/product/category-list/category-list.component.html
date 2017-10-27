@@ -1,0 +1,22 @@
+<div>
+    <div class="row">
+        <div class="col">Categories</div>
+        <div class="col">Total Products</div>
+        <div class="col"><button (click)="expandAll()">Expand All</button></div>
+    </div>
+    <div *ngIf="products">
+        <div *ngFor="let category of categories">
+            <div class="row">
+                <div class="col"><a [routerLink]="['/details/category', category.id]">{{ category.name }}</a></div>
+                <div class="col">{{  getTotalProducts(category.id) }}</div>
+                <div class="col">
+                    <button (click)="category.isExpanded=!category.isExpanded">></button>
+                </div>
+            </div>
+            <product-list [id]="category.id" *ngIf="category.isExpanded"></product-list>
+        </div>
+    </div>
+    <div *ngFor="let products of filteredProducts">
+        <div>{{ products.name }}</div>
+    </div>
+</div>  

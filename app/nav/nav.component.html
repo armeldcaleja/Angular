@@ -1,0 +1,13 @@
+<div class="container">
+    <nav>
+        <a routerLink="/all-product">My Store</a>
+        <a routerLink="/all-product">All Product</a>
+        <input type="text">
+        <button>Search</button>
+        <button (click)="setCurrency()">Dollar</button>
+        <button (click)="setCurrency()">Peso</button>
+        <label>Welcome Juan</label>
+    </nav>
+    <button (click)="testIsTrue()">test</button>
+    <div>test: {{ 1 | convertcurrency: isDollar }}</div>
+</div>
